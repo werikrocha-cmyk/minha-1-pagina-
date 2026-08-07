@@ -20,8 +20,10 @@
              max-width: 800px;
              margin: 0 auto;
              padding: 16px;
-             display: flex;
         }
+         article{
+             display: flex;
+         }
          img { 
            width: 80px;
            height: 80px;
@@ -50,7 +52,7 @@
         </main>
                 <img src="imagem-bog.png" alt="">
        <div>
-            <H2>MEU PRIMEIRO POST</H2>
+            <H2>MEU SEGUNDO POST</H2>
              <P class="artigo-autor">por: Werik rocha</P>
              <p>Boa-vinda ao meu novo blog! Aqui vou compartilhar dica de progamação e curiosidade da áreade tecnologia</p>
              <button>👍 <span>0</span></button>
@@ -62,15 +64,18 @@
 <script>
    const botoes = document.querySelectorAll("button");
 
-   botoes.forEach(function(botao)
-
-   )
+   botoes.forEach(function(botao) {
+      let curtiu = false; 
+  } )
    botao.addEventListener("click", botaoclicado);
 
    function botaoclicado(){
         console.log("fui clicado");
         let texto = botao.querySelector("span");
-        texto.textContent++
+        if (curtiu === "false"){
+
+            texto.textContent++
+        }
     }
 
 </script>
