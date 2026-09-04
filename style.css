@@ -1,47 +1,88 @@
+ :root {
+    --cor-primaria: #fff5f5;
+    --cor-segundaria: #ffffff;
+    --cor-fundo: #ffffff;
+    --cor-texto: #333333; /* Ajustado para melhor leitura no claro */
+    --cor-contraste: #000000;
+    --cor-botao: #ffffff;
+
+    --fonte-texto: 'Segoe UI', sans-serif;
+}
+
+.tema-escuro {
+    --cor-primaria: #010102;
+    --cor-segundaria: #010102;
+    --cor-fundo: #000000;
+    --cor-texto: #fdfdfd; /* Corrigido para claro, garantindo visibilidade no escuro */
+    --cor-contraste: #ffffff;
+    --cor-botao: #000000;
+}
+
+.tema-escuro a {
+    color: var(--cor-segundaria);
+}
+
+.tema-escuro p {
+    color: var(--cor-texto);
+}
+
+.tema-escuro header p {
+    color: var(--cor-contraste);
+}
+
 body {
-    max-width: 100vw;
+    width: 100%;
+    font-family: var(--fonte-texto);
 }
-header{ 
-background-color: rgb(253, 194, 116);
-color: white;
-text-align: center;
-margin: 0 auto;
-padding: 16px;
-border: 5px solid  rgb(255, 197, 150);
- 
-}
-main{
-    background-color: white;
-    color: rgb(252, 209, 130);
-margin: 0 auto;
-padding: 16px;
 
-display: flex;
-flex-wrap: wrap;
-} 
-article{
+header {
+    background-color: var(--cor-fundo);
+    color: var(--cor-contraste);
+    text-align: center;
+    margin: 0 auto;
+    padding: 16px;
+    border: 5px solid #203888;
+}
+
+main {
+    background-color: #112247;
+    color: #4477ad;
+    margin: 0 auto;
+    padding: 16px;
     display: flex;
+    flex-wrap: wrap;
+}
 
-    border: 2px solid  rgb(255, 203, 134);
+article {
+    display: flex;
+    border: 1px solid #73b7ff;
     margin: 16px;
     gap: 16px;
     padding: 16px;
-
     flex: 1 1 25%;
-
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
 }
-img{
-    width:300px ;
-    height: 300px;
-    border-right: 25px;
+
+img {
+    width: 80px;
+    height: 80px;
 }
-.artigo-autor  {
+
+.artigo-autor {
     font-weight: bold;
 }
-article{
-    padding-bottom: 50px;
+
+.btn-tema-escuro {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;  
+    font-size: 32px;
+    padding: 12px;   
+    background-color: var(--cor-primaria); 
+    border-radius: 50%; 
+    border: none; 
+    cursor: pointer;
 }
