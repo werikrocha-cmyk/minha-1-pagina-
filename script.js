@@ -25,7 +25,7 @@ curtiu = true;
   if(corpoPagina.classList.contains("tema escuro")) {
     corpoPagina.classList.remove("tema-escuro");
   } else{
-    corpoPagina.classList.add("tema-escuro")
+    corpoPagina.classList.add("tema-escuro");
   }
  
 
