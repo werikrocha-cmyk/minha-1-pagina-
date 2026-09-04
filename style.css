@@ -2,18 +2,21 @@
     --cor-primaria: #fff5f5;
     --cor-segundaria: #ffffff;
     --cor-fundo: #ffffff;
-    --cor-texto: #333333; /* Ajustado para melhor leitura no claro */
+    --cor-texto: #333333; 
     --cor-contraste: #000000;
     --cor-botao: #ffffff;
 
     --fonte-texto: 'Segoe UI', sans-serif;
+}
+*{
+    transition: background-color 0.3s ease;
 }
 
 .tema-escuro {
     --cor-primaria: #010102;
     --cor-segundaria: #010102;
     --cor-fundo: #000000;
-    --cor-texto: #fdfdfd; /* Corrigido para claro, garantindo visibilidade no escuro */
+    --cor-texto: #fdfdfd; 
     --cor-contraste: #ffffff;
     --cor-botao: #000000;
 }
