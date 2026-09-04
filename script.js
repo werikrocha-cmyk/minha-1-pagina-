@@ -1,34 +1,30 @@
-  const botoes =document.querySelectorAll("button");
+// Seleciona apenas os botões de reação (ignorando o botão de tema)
+const botoes = document.querySelectorAll("main article button");
 
-    botoes.forEach( function(botao){
-        let curtiu = false;
-        botao.addEventListener("click", botaoClicado);
-        function botaoClicado(){
-            console.log("fui clicado");
-            let texto = botao.querySelector("span")
-            if (curtiu === false){
-                texto.textContent++;
-curtiu = true;
-            } else{
-        texto.textContent--;
+botoes.forEach(function (botao) {
+  let curtiu = false;
+
+  botao.addEventListener("click", function () {
+    let texto = botao.querySelector("span");
+
+    if (texto) {
+      if (!curtiu) {
+        texto.textContent = parseInt(texto.textContent) + 1;
+        curtiu = true;
+      } else {
+        texto.textContent = parseInt(texto.textContent) - 1;
         curtiu = false;
-            }
-        }
-    })
-    
-    const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
+      }
+    }
+  });
+});
 
-     btnTemaEscuro.addEventListener("click", mudaTema);
+// Lógica para alternar o tema escuro
+const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
 
- function mudaTema() {
-  const corpoPagina = document. body;
-  if(corpoPagina.classList.contains("tema-escuro")) {
-    corpoPagina.classList.remove("tema-escuro");
-  } else{
-    corpoPagina.classList.add("tema-escuro");
-  }
- 
+btnTemaEscuro.addEventListener("click", mudaTema);
 
-
-
- }    
+function mudaTema() {
+  const corpoPagina = document.body;
+  corpoPagina.classList.toggle("tema-escuro");
+}
